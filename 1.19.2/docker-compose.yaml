@@ -1,0 +1,16 @@
+services:
+  minecraft:
+    image: minecraft-forge:1.19.2
+    container_name: minecraft-forge
+    ports:
+    - 25565:25565
+    - 25575:25575
+    volumes:
+    - /home/minecraft/test-mc/root:/minecraft
+    - /home/minecraft/test-mc/mods:/minecraft/mods
+    - /home/minecraft/test-mc/kubejs:/minecraft/kubejs
+    - /home/minecraft/test-mc/config:/minecraft/config
+    - /home/minecraft/test-mc/defaultconfigs:/minecraft/defaultconfigs
+    - /home/minecraft/test-mc/scripts:/minecraft/scripts
+    - /home/minecraft/test-mc/modernfix:/minecraft/modernfix
+    restart: unless-stopped
